@@ -1,5 +1,23 @@
 {
-	"testing" : {
-		"hello" : "Hello, User!"
+	"navigation-menu": {
+		"main": "Main page",
+		"tasks": "Tasks",
+		"schedule": "Schedule",
+		"cash_and_products": "Cash desk and products",
+		"finance": "Finance",
+		"customers": "Customers",
+		"employees": "Employees",
+		"marketing": "Marketing",
+		"license": "License",
+		"history_of_changes": "History of changes",
+		"settings": "Settings"
+	},
+	"staff" : {
+
+	},
+	"schedule" : {
+
+	}, "tasks" : {
+		
 	}
 }

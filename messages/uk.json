@@ -1,5 +1,23 @@
 {
-	"testing" : {
-		"hello" : "Привіт, Користувач!"
+	"navigation-menu": {
+		"main": "Головна",
+		"tasks": "Задачі",
+		"schedule": "Графік",
+		"cash_and_products": "Каса та товари",
+		"finance": "Фінанси",
+		"customers": "Клієнти",
+		"employees": "Співробітники",
+		"marketing": "Маркетинг",
+		"license": "Ліцензія",
+		"history_of_changes": "Історія змін",
+		"settings": "Налаштування"
+	},
+	"staff" : {
+
+	},
+	"schedule" : {
+
+	}, "tasks" : {
+		
 	}
 }

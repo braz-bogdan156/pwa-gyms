@@ -1,792 +1,268 @@
+/*const staff = [
+	{
+		name : "string",
+		surname : "string",
+		image : "url string",
+		raiting: "number",
+		activity_ind : "number",
+		activity_groop: "number",
+		profit: "number",
+		rate: "number",
+		created_date: "date&time",
+		date_of_start_of_work: "date&time",
+		vacations: {
+			count,
+			list :[
+				{
+					start : "date&time",
+					end : "date&time"
+				}
+			]
+		},
+		sick_leave: {
+			count,
+			list :[
+				{
+					start : "date&time",
+					end : "date&time"
+				}
+			]
+		},
+		birthday: "date&time" ,
+		date_of_dismissal : "date&time",
+		gender : "string",
+		biography : "string",
+		specialization : ["string", "string" спеціалізація тренерів],
+		phone : "string",
+		email : "string",
+		address: "string"
+	}
+]
+*/
+
 const staff = [
 	{
-		id : 1,
-		created_date : "2024.01.02",
-		user : {
-			name : "Іван",
-			surname : "Петоров",
-			sex : "girl", 
-			role : "Тренер",
-			avatar : "https://starwars-visualguide.com/assets/img/characters/1.jpg",
-			phone : "+3809434567890",
-			email : "mail@mail.com",
-			birthday :  "2000.05.02",
-			adres : {
-				country : "Україна",
-				state : "Рівненька",
-				city : "смт. Клеванл",
-				adres : "Туполева 10" ,
-				zipcode: "03456",
-			},
-			zipcode: "03456",
-			
-		},
-		staff : {
-			information : {
-				bio : "",
-				expertiza : "", 
-				education : "",
-				speciality : ""
-			},
-			clients : {
-				quantyty : 0, 
-				list : []
-			},
-			status : "Вихідний",
-			working_day : 176,
-			description : `Ласкаво просимо до "Еквілібріуму" - вашого простору для гармонії тіла та душі!
-	
-			Тут, де фізичне здоров'я та душевний спокій зливаються в єдине джерело енергії та відновлення, ми пропонуємо вам неповторний досвід тренувань, що зміцнить ваше тіло та заспокоїть ваш розум.
-			
-			Наша місія - створити середовище, де ви зможете розвивати свої фізичні здібності та глибше пізнавати себе.
-			
-			Наша команда досвідчених тренерів, які володіють глибокими знаннями в "Боксі", "Пілатесі" та "Йозі", допоможе вам не лише оволодіти технікою, але й розкрити всю красу та глибину кожного напрямку.
-			
-			Зали "Еквілібріуму" оснащені сучасним обладнанням та інфраструктурою, що гарантує комфортні та ефективні тренування.
-			
-			Кожен день тут наповнений позитивною енергією та можливостями для саморозвитку.
-			
-			Незалежно від вашого рівня підготовки чи цілей, ми готові відкрити для вас двері до нових досягнень та відкриттів.
-			
-			В "Еквілібріумі" ми віримо, що кожна людина заслуговує на щасливе та здорове життя, тому ми докладаємо всіх зусиль, щоб зробити ваш шлях до нього яскравим та насиченим.
-			
-			Приєднуйтесь до нас сьогодні і дозвольте собі відкрити нову сторінку у своєму житті!
-			
-			`,
-			bio : `Я завжди був захоплений фізичною активністю та її впливом на людське тіло та розум. З юних років я перепробував багато різних видів спорту, шукаючи те, що дійсно захопить мене та допоможе мені досягти своїх цілей.
-	
-			Після багатьох років досліджень та практики я виявив, що бокс, пілатес та йога - це три найефективніші та найцікавіші для мене напрямки.
-			
-			Бокс навчив мене дисципліни, витривалості та самоконтролю. Він допоміг мені стати сильнішим, як фізично, так і ментально.
-			
-			Пілатес покращив мою гнучкість, координацію та баланс. Він також допоміг мені позбутися болю в спині та покращити свою поставу.
-			
-			Йога навчила мене єднати тіло та розум, а також знаходити внутрішній спокій та гармонію. Вона допомогла мені стати більш усвідомленим та жити в теперішньому моменті.
-			
-			Я вірю, що поєднання цих трьох напрямків дає людям можливість досягти оптимального рівня фізичної та ментальної підготовки.
-			
-			Саме тому я вирішив стати тренером з боксу, пілатесу та йоги.
-			
-			Моя мета - допомогти людям відкрити для себе красу та силу цих трьох напрямків, а також досягти своїх фітнес-цілей.
-			
-			Я щиро вірю, що кожен може покращити своє життя за допомогою фізичних вправ та єднання тіла та розуму.
-			
-			Я запрошую вас приєднатися до мене на шляху до кращого життя!`, 
-			tags : ["Бокс", "Пілатес", "Йога"]
-		},
-		servises : [
-			{
-				name : "Йога",
-				used_the_service : 350,
-				duration : "45",
-				price : 100,
-				commision : 50,
-				raiting : 3.7 
-			},
-			{
-				name : "Персональні тренування",
-				used_the_service : 936,
-				duration : "45",
-				price : 100,
-				commision : 50,
-				raiting : 4.2 
-			}
-		],
-		reviews : {
-			raiting : 4.5, 
-			coutn : 180,
-			next : "url",
-			previus : "url",
-			data : [
+		id: 1,
+		name: "Олександр",
+		surname: "Петров",
+		image: "https://example.com/staff1.jpg",
+		raiting: 4.5,
+		activity_ind: 120,
+		activity_groop: 80,
+		profit: 15000,
+		rate: 200,
+		created_date: "2020-05-15T08:00:00Z",
+		date_of_start_of_work: "2020-05-15T08:00:00Z",
+		vacations: {
+			count: 3,
+			list: [
 				{
-					"client": {
-						"name": "Іван",
-						"surname": "Петренко",
-						"id": 2345
-					},
-					"reviews": {
-						"title": "Найкращий тренер з боксу!",
-						"description": "Хочу подякувати [Ім'я тренера] за його чудові тренування з боксу! Завдяки його професіоналізму та мотивації я значно покращив свою фізичну форму, навчився правильно бити та захищатися. \n\nТренування завжди проходять динамічно, цікаво та з позитивом. [Ім'я тренера] завжди уважний до своїх підопічних, стежить за правильною технікою виконання вправ, дає цінні поради та підтримує бойовий дух.\n\nЯ рекомендую всім, хто шукає кваліфікованого тренера з боксу, звернутися до [Ім'я тренера].",
-						"assessment": 5,
-						"date": "2024-04-03"
-					}
+					start: "2021-06-01T00:00:00Z",
+					end: "2021-06-15T00:00:00Z"
 				},
 				{
-					"client": {
-						"name": "Марія",
-						"surname": "Сидоренко",
-						"id": 2346
-					},
-					"reviews": {
-						"title": "Пілатес - це моє!",
-						"description": "Після кількох місяців занять пілатесом з [Ім'я тренера] я можу з упевненістю сказати, що це один з найкращих тренерів, яких я зустрічала. \n\n[Ім'я тренера] має глибокі знання анатомії та фізіології, завдяки чому тренування максимально безпечні та ефективні. Вона завжди уважна до деталей, стежить за правильним виконанням вправ і дає корисні поради.\n\nПісля занять я відчуваю себе бадьорою, енергійною та сповненою сил. Пілатес допоміг мені покращити свою поставу, позбутися болю в спині та стати більш гнучкою.\n\nЯ щиро рекомендую [Ім'я тренера] всім, хто шукає досвідченого та уважного тренера з пілатесу.",
-						"assessment": 5,
-						"date": "2024-04-03"
-					}
+					start: "2022-06-01T00:00:00Z",
+					end: "2022-06-15T00:00:00Z"
 				},
 				{
-					"client": {
-						"name": "Олег",
-						"surname": "Іванов",
-						"id": 2347
-					},
-					"reviews": {
-						"title": "Йога - шлях до гармонії",
-						"description": "Завдяки заняттям йогою з [Ім'я тренера] я знайшла не лише фізичну гармонію, але й душевний спокій. \n\n[Ім'я тренера] має глибокі знання йоги та ділиться ними з щирою любов'ю. Вона створює на заняттях атмосферу спокою та довіри, що допомагає повністю розслабитися та відключитися від зовнішнього світу.\n\nЙога допомогла мені стати більш гнучкою, покращити свою координацію та баланс. А також навчила мене концентруватися на теперішньому моменті та жити в гармонії з собою.\n\nЯ рекомендую всім, хто шукає гармонію тіла та душі, спробувати заняття йогою з [Ім'я тренера].",
-						"assessment": 5,
-						"date": "2024-04-03"
-					}
-				}
-			]		
-		},
-		document : [
-			{
-				name : "Паспорт",
-				details : "Паспорт громадянина",
-				created_date : "01.01.2024",
-				end_date : "",
-				url : "https://link.ua",
-				signed: "",
-				number : "FF567493"
-			},
-			{
-				name : "Договір про співпрацю",
-				details : "Договір партнерства про тренерство",
-				created_date : "01.01.2024",
-				end_date : "01.01.2026",
-				url : "https://link.ua",
-				signed: "05.01.2024",
-				number : "05/01/2024/4"
-			}
-		],
-		schedule : {
-			accumulated_sick_leave : 0,
-			сhanges_have_been_made : 20,
-			сalendar : [
-				{
-					"day": "Понеділок",
-					"start_of_shift": "09:00",
-					"end_of_shift": "18:00",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": false
-				},
-				{
-					"day": "Вівторок",
-					"start_of_shift": "09:00",
-					"end_of_shift": "18:00",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": false
-				},
-				{
-					"day": "Середа",
-					"start_of_shift": "09:00",
-					"end_of_shift": "18:00",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": false
-				},
-				{
-					"day": "Четвер",
-					"start_of_shift": "09:00",
-					"end_of_shift": "18:00",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": false
-				},
-				{
-					"day": "П'ятниця",
-					"start_of_shift": "09:00",
-					"end_of_shift": "18:00",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": false
-				},
-				{
-					"day": "Субота",
-					"start_of_shift": "вихідний",
-					"end_of_shift": "вихідний",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": true
-				},
-				{
-					"day": "Неділя",
-					"start_of_shift": "вихідний",
-					"end_of_shift": "вихідний",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": true
+					start: "2023-06-01T00:00:00Z",
+					end: "2023-06-15T00:00:00Z"
 				}
 			]
-			
-		}
-	
-		
-	},{
-		id : 2,
-		created_date : "2024.02.02",
-		user : {
-			name : "Олена",
-			surname : "Іванченко",
-			sex : "girl", 
-			role : "Тренер",
-			avatar : "https://starwars-visualguide.com/assets/img/characters/2.jpg",
-			phone : "+3809434567890",
-			email : "mail@mail.com",
-			birthday :  "2000.05.02",
-			adres : {
-				country : "Україна",
-				state : "Рівненька",
-				city : "смт. Клеванл",
-				adres : "Туполева 10" ,
-				zipcode: "03456",
-			},
-			zipcode: "03456",
-			
 		},
-		staff : {
-			information : {
-				bio : "",
-				expertiza : "", 
-				education : "",
-				speciality : ""
-			},
-			clients : {
-				quantyty : 0 , 
-				list : []
-			},
-			status : "Вихідний",
-			working_day : 176,
-			description : `Навчаю тренуванню вже 20 років`,
-			bio : `Навчалась у Поплавського полюбляю велосипеди`, 
-			tags : ["Танці", "Акробатика", "Силові"]
-		},
-		servises : [
-			{
-				name : "Акробатика",
-				used_the_service : 337,
-				duration : "45",
-				price : 100,
-				commision : 50,
-				raiting : 3.7 
-			},
-			{
-				name : "Персональні тренування",
-				used_the_service : 936,
-				duration : "45",
-				price : 100,
-				commision : 50,
-				raiting : 4.2 
-			}
-		],
-		reviews : {
-			raiting : 4.3, 
-			coutn : 180,
-			next : "url",
-			previus : "url",
-			data : [
+		sick_leave: {
+			count: 1,
+			list: [
 				{
-					"client": {
-						"name": "Іван",
-						"surname": "Петренко",
-						"id": 2345
-					},
-					"reviews": {
-						"title": "Найкращий тренер з боксу!",
-						"description": "Хочу подякувати [Ім'я тренера] за його чудові тренування з боксу! Завдяки його професіоналізму та мотивації я значно покращив свою фізичну форму, навчився правильно бити та захищатися. \n\nТренування завжди проходять динамічно, цікаво та з позитивом. [Ім'я тренера] завжди уважний до своїх підопічних, стежить за правильною технікою виконання вправ, дає цінні поради та підтримує бойовий дух.\n\nЯ рекомендую всім, хто шукає кваліфікованого тренера з боксу, звернутися до [Ім'я тренера].",
-						"assessment": 5,
-						"date": "2024-04-03"
-					}
-				},
-				{
-					"client": {
-						"name": "Марія",
-						"surname": "Сидоренко",
-						"id": 2346
-					},
-					"reviews": {
-						"title": "Пілатес - це моє!",
-						"description": "Після кількох місяців занять пілатесом з [Ім'я тренера] я можу з упевненістю сказати, що це один з найкращих тренерів, яких я зустрічала. \n\n[Ім'я тренера] має глибокі знання анатомії та фізіології, завдяки чому тренування максимально безпечні та ефективні. Вона завжди уважна до деталей, стежить за правильним виконанням вправ і дає корисні поради.\n\nПісля занять я відчуваю себе бадьорою, енергійною та сповненою сил. Пілатес допоміг мені покращити свою поставу, позбутися болю в спині та стати більш гнучкою.\n\nЯ щиро рекомендую [Ім'я тренера] всім, хто шукає досвідченого та уважного тренера з пілатесу.",
-						"assessment": 5,
-						"date": "2024-04-03"
-					}
-				},
-				{
-					"client": {
-						"name": "Олег",
-						"surname": "Іванов",
-						"id": 2347
-					},
-					"reviews": {
-						"title": "Йога - шлях до гармонії",
-						"description": "Завдяки заняттям йогою з [Ім'я тренера] я знайшла не лише фізичну гармонію, але й душевний спокій. \n\n[Ім'я тренера] має глибокі знання йоги та ділиться ними з щирою любов'ю. Вона створює на заняттях атмосферу спокою та довіри, що допомагає повністю розслабитися та відключитися від зовнішнього світу.\n\nЙога допомогла мені стати більш гнучкою, покращити свою координацію та баланс. А також навчила мене концентруватися на теперішньому моменті та жити в гармонії з собою.\n\nЯ рекомендую всім, хто шукає гармонію тіла та душі, спробувати заняття йогою з [Ім'я тренера].",
-						"assessment": 5,
-						"date": "2024-04-03"
-					}
-				}
-			]		
-		},
-		document : [
-			{
-				name : "Паспорт",
-				details : "Паспорт громадянина",
-				created_date : "01.01.2024",
-				end_date : "",
-				url : "https://link.ua",
-				signed: "",
-				number : "FF567493"
-			},
-			{
-				name : "Договір про співпрацю",
-				details : "Договір партнерства про тренерство",
-				created_date : "01.01.2024",
-				end_date : "01.01.2026",
-				url : "https://link.ua",
-				signed: "05.01.2024",
-				number : "05/01/2024/4"
-			}
-		],
-		schedule : {
-			accumulated_sick_leave : 0,
-			сhanges_have_been_made : 20,
-			сalendar : [
-				{
-					"day": "Понеділок",
-					"start_of_shift": "09:00",
-					"end_of_shift": "18:00",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": false
-				},
-				{
-					"day": "Вівторок",
-					"start_of_shift": "09:00",
-					"end_of_shift": "18:00",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": false
-				},
-				{
-					"day": "Середа",
-					"start_of_shift": "09:00",
-					"end_of_shift": "18:00",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": false
-				},
-				{
-					"day": "Четвер",
-					"start_of_shift": "09:00",
-					"end_of_shift": "18:00",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": false
-				},
-				{
-					"day": "П'ятниця",
-					"start_of_shift": "09:00",
-					"end_of_shift": "18:00",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": false
-				},
-				{
-					"day": "Субота",
-					"start_of_shift": "вихідний",
-					"end_of_shift": "вихідний",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": true
-				},
-				{
-					"day": "Неділя",
-					"start_of_shift": "вихідний",
-					"end_of_shift": "вихідний",
-					"on_sick_leave": false,
-					"vacation": false,
-					"weekend": true
+					start: "2023-02-20T00:00:00Z",
+					end: "2023-02-28T00:00:00Z"
 				}
 			]
-			
-		}
-	
-		
-	},{
-		"id": 3,
-		"created_date": "2024.04.22",
-		"user": {
-		  "name": "Максим",
-		  "surname": "Петров",
-		  "sex": "boy",
-		  "role": "Тренер",
-		  "avatar": "https://starwars-visualguide.com/assets/img/characters/3.jpg",
-		  "phone": "+380977654321",
-		  "email": "maxim@mail.com",
-		  "birthday": "1985.10.15",
-		  "adres": {
-			"country": "Україна",
-			"state": "Київська",
-			"city": "Київ",
-			"adres": "вул. Пушкіна, буд. 10",
-			"zipcode": "01010"
-		  },
-		  "zipcode": "01010"
 		},
-		"staff": {
-		  "information": {
-			"bio": "Професійний тренер з більш ніж 10-річним досвідом.",
-			"expertiza": "Фітнес, функціональний тренінг",
-			"education": "Київський Інститут Фізичної Культури",
-			"speciality": "Персональний тренер"
-		  },
-		  "clients": {
-			"quantyty": 45,
-			"list": [234, 567, 890]
-		  },
-		  "status": "Працює",
-		  "working_day": 200,
-		  "description": "Люблю працювати з людьми та допомагати їм досягати своїх цілей.",
-		  "bio": "Волонтер, захоплююся гірським велосипедом.",
-		  "tags": ["Фітнес", "Функціональний тренінг", "Стретчінг"]
+		birthday: "1990-03-25T00:00:00Z",
+		date_of_dismissal: null,
+		gender: "Чоловік",
+		biography: "Олександр має 10 років досвіду в фітнес-індустрії. Спеціалізується на силових тренуваннях та кардіо.",
+		specialization: ["Силові тренування", "Кардіо"],
+		phone: "+380501234567",
+		email: "olexander.petrov@example.com",
+		address: "Київ, вул. Шевченка, 12"
+	},
+	{
+		id: 2,
+		name: "Ірина",
+		surname: "Коваленко",
+		image: "https://example.com/staff2.jpg",
+		raiting: 4.8,
+		activity_ind: 140,
+		activity_groop: 90,
+		profit: 16000,
+		rate: 210,
+		created_date: "2019-08-20T08:00:00Z",
+		date_of_start_of_work: "2019-08-20T08:00:00Z",
+		vacations: {
+			count: 2,
+			list: [
+				{
+					start: "2021-07-01T00:00:00Z",
+					end: "2021-07-14T00:00:00Z"
+				},
+				{
+					start: "2022-07-01T00:00:00Z",
+					end: "2022-07-14T00:00:00Z"
+				}
+			]
 		},
-		"servises": [
-		  {
-			"name": "Персональні тренування",
-			"used_the_service": 200,
-			"duration": "60",
-			"price": 150,
-			"commision": 70,
-			"raiting": 4.8
-		  },
-		  {
-			"name": "Функціональний тренінг",
-			"used_the_service": 150,
-			"duration": "60",
-			"price": 120,
-			"commision": 60,
-			"raiting": 4.5
-		  }
-		],
-		"reviews": {
-		  "raiting": 4.7,
-		  "coutn": 85,
-		  "next": "url",
-		  "previus": "url",
-		  "data": [
-			{
-			  "client": {
-				"name": "Олександра",
-				"surname": "Іванова",
-				"id": 1234
-			  },
-			  "reviews": {
-				"title": "Найкращий тренер!",
-				"description": "Максим - це найкращий тренер, з яким я коли-небудь працювала! Його професіоналізм, терпіння та підхід до клієнтів - бездоганні. Я змінила своє життя завдяки його тренуванням і раджу всім спробувати.",
-				"assessment": 5,
-				"date": "2024-04-20"
-			  }
-			},
-			{
-			  "client": {
-				"name": "Віктор",
-				"surname": "Петренко",
-				"id": 5678
-			  },
-			  "reviews": {
-				"title": "Відмінний тренер",
-				"description": "Максим - відмінний професіонал. З його допомогою я досяг своїх фітнес-цілей та змінив своє тіло назавжди. Рекомендую всім!",
-				"assessment": 5,
-				"date": "2024-04-15"
-			  }
-			},
-			{
-			  "client": {
-				"name": "Євгенія",
-				"surname": "Сидоренко",
-				"id": 9876
-			  },
-			  "reviews": {
-				"title": "Супер тренер!",
-				"description": "Максим - це справжній професіонал своєї справи. Завдяки йому я почуваюся краще, ніж коли-небудь. Рекомендую всім!",
-				"assessment": 5,
-				"date": "2024-04-10"
-			  }
-			}
-		  ]
+		sick_leave: {
+			count: 0,
+			list: []
 		},
-		"document": [
-		  {
-			"name": "Ліцензія на провадження діяльності",
-			"details": "Ліцензія на фітнес-послуги",
-			"created_date": "2024.02.01",
-			"end_date": "2025.02.01",
-			"url": "https://link.ua",
-			"signed": "2024.02.01",
-			"number": "12345/01"
-		  },
-		  {
-			"name": "Диплом про вищу освіту",
-			"details": "Диплом про закінчення вищого навчального закладу",
-			"created_date": "2008.06.30",
-			"end_date": "",
-			"url": "https://link.ua",
-			"signed": "",
-			"number": "54321/01"
-		  }
-		],
-		"schedule": {
-		  "accumulated_sick_leave": 3,
-		  "сhanges_have_been_made": 10,
-		  "сalendar": [
-			{
-			  "day": "Понеділок",
-			  "start_of_shift": "08:00",
-			  "end_of_shift": "17:00",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": false
-			},
-			{
-			  "day": "Вівторок",
-			  "start_of_shift": "08:00",
-			  "end_of_shift": "17:00",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": false
-			},
-			{
-			  "day": "Середа",
-			  "start_of_shift": "08:00",
-			  "end_of_shift": "17:00",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": false
-			},
-			{
-			  "day": "Четвер",
-			  "start_of_shift": "вихідний",
-			  "end_of_shift": "вихідний",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": true
-			},
-			{
-			  "day": "П'ятниця",
-			  "start_of_shift": "08:00",
-			  "end_of_shift": "17:00",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": false
-			},
-			{
-			  "day": "Субота",
-			  "start_of_shift": "вихідний",
-			  "end_of_shift": "вихідний",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": true
-			},
-			{
-			  "day": "Неділя",
-			  "start_of_shift": "вихідний",
-			  "end_of_shift": "вихідний",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": true
-			}
-		  ]
-		}
-	  },{
-		"id": 4,
-		"created_date": "2024.04.22",
-		"user": {
-		  "name": "Анастасія",
-		  "surname": "Соколова",
-		  "sex": "girl",
-		  "role": "Тренер",
-		  "avatar": "https://starwars-visualguide.com/assets/img/characters/4.jpg",
-		  "phone": "+380998765432",
-		  "email": "nastya@mail.com",
-		  "birthday": "1990.07.25",
-		  "adres": {
-			"country": "Україна",
-			"state": "Одеська",
-			"city": "Одеса",
-			"adres": "вул. Гагаріна, буд. 5",
-			"zipcode": "65000"
-		  },
-		  "zipcode": "65000"
+		birthday: "1992-05-15T00:00:00Z",
+		date_of_dismissal: null,
+		gender: "Жінка",
+		biography: "Ірина є сертифікованим тренером з йоги та пілатесу. Працює в індустрії понад 8 років.",
+		specialization: ["Йога", "Пілатес"],
+		phone: "+380502345678",
+		email: "irina.kovalenko@example.com",
+		address: "Львів, вул. Франка, 24"
+	},
+	{
+		id: 3,
+		name: "Дмитро",
+		surname: "Захарченко",
+		image: "https://example.com/staff3.jpg",
+		raiting: 4.6,
+		activity_ind: 130,
+		activity_groop: 85,
+		profit: 15500,
+		rate: 205,
+		created_date: "2018-09-10T08:00:00Z",
+		date_of_start_of_work: "2018-09-10T08:00:00Z",
+		vacations: {
+			count: 4,
+			list: [
+				{
+					start: "2019-09-01T00:00:00Z",
+					end: "2019-09-14T00:00:00Z"
+				},
+				{
+					start: "2020-09-01T00:00:00Z",
+					end: "2020-09-14T00:00:00Z"
+				},
+				{
+					start: "2021-09-01T00:00:00Z",
+					end: "2021-09-14T00:00:00Z"
+				},
+				{
+					start: "2022-09-01T00:00:00Z",
+					end: "2022-09-14T00:00:00Z"
+				}
+			]
 		},
-		"staff": {
-		  "information": {
-			"bio": "Професійний тренер з різноманітним досвідом у спортивній галузі.",
-			"expertiza": "Йога, пілатес, стретчінг",
-			"education": "Одеський державний університет фізичної культури та спорту",
-			"speciality": "Сертифікований інструктор з йоги"
-		  },
-		  "clients": {
-			"quantyty": 60,
-			"list": [123, 456, 789]
-		  },
-		  "status": "Відпустка",
-		  "working_day": 180,
-		  "description": "Люблю допомагати людям досягати гармонії та рівноваги у своєму тілі та дусі.",
-		  "bio": "Займаюся йогою та медитацією з дитинства.",
-		  "tags": ["Йога", "Пілатес", "Стретчінг"]
+		sick_leave: {
+			count: 1,
+			list: [
+				{
+					start: "2023-03-15T00:00:00Z",
+					end: "2023-03-20T00:00:00Z"
+				}
+			]
 		},
-		"servises": [
-		  {
-			"name": "Йога",
-			"used_the_service": 150,
-			"duration": "60",
-			"price": 120,
-			"commision": 60,
-			"raiting": 4.7
-		  },
-		  {
-			"name": "Пілатес",
-			"used_the_service": 100,
-			"duration": "45",
-			"price": 100,
-			"commision": 50,
-			"raiting": 4.5
-		  }
-		],
-		"reviews": {
-		  "raiting": 4.6,
-		  "coutn": 95,
-		  "next": "url",
-		  "previus": "url",
-		  "data": [
-			{
-			  "client": {
-				"name": "Марина",
-				"surname": "Попова",
-				"id": 2345
-			  },
-			  "reviews": {
-				"title": "Найкращі тренування йоги!",
-				"description": "Анастасія - це просто відмінний інструктор з йоги! Завдяки її тренуванням я відчуваю себе справжньою йогіньою. Вона допомагає розслабитися та зосередитися на диханні. Рекомендую її всім, хто хоче відчути гармонію та спокій.",
-				"assessment": 5,
-				"date": "2024-04-20"
-			  }
-			},
-			{
-			  "client": {
-				"name": "Ігор",
-				"surname": "Петров",
-				"id": 6789
-			  },
-			  "reviews": {
-				"title": "Відмінний тренер",
-				"description": "Анастасія - це справжній професіонал у своїй справі. Її заняття пілатесом - це справжня насолода! Вона допомагає покращити гнучкість та зміцнити м'язи. Рекомендую всім!",
-				"assessment": 5,
-				"date": "2024-04-15"
-			  }
-			},
-			{
-			  "client": {
-				"name": "Анна",
-				"surname": "Іванова",
-				"id": 9876
-			  },
-			  "reviews": {
-				"title": "Чудові заняття стретчінгу",
-				"description": "Дуже задоволена заняттями стретчінгу з Анастасією. Вона створює атмосферу спокою та розслаблення. Після тренування відчуваю себе більш гнучкою та зосередженою. Дуже рекомендую!",
-				"assessment": 5,
-				"date": "2024-04-10"
-			  }
-			}
-		  ]
+		birthday: "1988-07-10T00:00:00Z",
+		date_of_dismissal: null,
+		gender: "Чоловік",
+		biography: "Дмитро є тренером з 12-річним досвідом. Спеціалізується на функціональних тренуваннях та кросфіті.",
+		specialization: ["Функціональні тренування", "Кросфіт"],
+		phone: "+380503456789",
+		email: "dmytro.zakharchenko@example.com",
+		address: "Одеса, вул. Дерибасівська, 5"
+	},
+	{
+		id: 4,
+		name: "Марія",
+		surname: "Литвиненко",
+		image: "https://example.com/staff4.jpg",
+		raiting: 4.9,
+		activity_ind: 150,
+		activity_groop: 100,
+		profit: 17000,
+		rate: 220,
+		created_date: "2021-01-05T08:00:00Z",
+		date_of_start_of_work: "2021-01-05T08:00:00Z",
+		vacations: {
+			count: 1,
+			list: [
+				{
+					start: "2022-01-01T00:00:00Z",
+					end: "2022-01-10T00:00:00Z"
+				}
+			]
 		},
-		"document": [
-		  {
-			"name": "Сертифікат інструктора йоги",
-			"details": "Сертифікат про успішне завершення курсів інструкторів з йоги",
-			"created_date": "2023.12.01",
-			"end_date": "",
-			"url": "https://link.ua",
-			"signed": "",
-			"number": "YOGA/123"
-		  },
-		  {
-			"name": "Диплом магістра фізичної культури",
-			"details": "Диплом про закінчення вищого навчального закладу",
-			"created_date": "2014.06.30",
-			"end_date": "",
-			"url": "https://link.ua",
-			"signed": "",
-			"number": "789/FC"
-		  }
-		],
-		"schedule": {
-		  "accumulated_sick_leave": 0,
-		  "сhanges_have_been_made": 5,
-		  "сalendar": [
-			{
-			  "day": "Понеділок",
-			  "start_of_shift": "08:00",
-			  "end_of_shift": "17:00",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": false
-			},
-			{
-			  "day": "Вівторок",
-			  "start_of_shift": "вихідний",
-			  "end_of_shift": "вихідний",
-			  "on_sick_leave": false,
-			  "vacation": true,
-			  "weekend": true
-			},
-			{
-			  "day": "Середа",
-			  "start_of_shift": "08:00",
-			  "end_of_shift": "17:00",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": false
-			},
-			{
-			  "day": "Четвер",
-			  "start_of_shift": "08:00",
-			  "end_of_shift": "17:00",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": false
-			},
-			{
-			  "day": "П'ятниця",
-			  "start_of_shift": "08:00",
-			  "end_of_shift": "17:00",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": false
-			},
-			{
-			  "day": "Субота",
-			  "start_of_shift": "вихідний",
-			  "end_of_shift": "вихідний",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": true
-			},
-			{
-			  "day": "Неділя",
-			  "start_of_shift": "вихідний",
-			  "end_of_shift": "вихідний",
-			  "on_sick_leave": false,
-			  "vacation": false,
-			  "weekend": true
-			}
-		  ]
-		}
-	  }	  
-]
+		sick_leave: {
+			count: 0,
+			list: []
+		},
+		birthday: "1993-11-25T00:00:00Z",
+		date_of_dismissal: null,
+		gender: "Жінка",
+		biography: "Марія є професійним тренером з танців. Має понад 6 років досвіду в хореографії та фітнесі.",
+		specialization: ["Танці", "Хореографія"],
+		phone: "+380504567890",
+		email: "maria.lytvynenko@example.com",
+		address: "Харків, вул. Сумська, 10"
+	},
+	{
+		id: 5,
+		name: "Сергій",
+		surname: "Павленко",
+		image: "https://example.com/staff5.jpg",
+		raiting: 4.7,
+		activity_ind: 125,
+		activity_groop: 90,
+		profit: 16000,
+		rate: 210,
+		created_date: "2020-03-01T08:00:00Z",
+		date_of_start_of_work: "2020-03-01T08:00:00Z",
+		vacations: {
+			count: 2,
+			list: [
+				{
+					start: "2021-03-01T00:00:00Z",
+					end: "2021-03-15T00:00:00Z"
+				},
+				{
+					start: "2022-03-01T00:00:00Z",
+					end: "2022-03-15T00:00:00Z"
+				}
+			]
+		},
+		sick_leave: {
+			count: 1,
+			list: [
+				{
+					start: "2023-04-10T00:00:00Z",
+					end: "2023-04-20T00:00:00Z"
+				}
+			]
+		},
+		birthday: "1991-09-20T00:00:00Z",
+		date_of_dismissal: null,
+		gender: "Чоловік",
+		biography: "Сергій має 9 років досвіду в тренуванні та реабілітації. Спеціалізується на лікувальній фізкультурі та реабілітації.",
+		specialization: ["Лікувальна фізкультура", "Реабілітація"],
+		phone: "+380505678901",
+		email: "serhiy.pavlenko@example.com",
+		address: "Дніпро, вул. Поля, 18"
+	}
+];
 
+export {staff}
 
 export default function handler(req, res) {
-	res.status(200).json(staff);
+
+	if (req.method === 'GET') {
+		res.status(200).json(staff);
+	} else {
+		res.status(405).json({ message: 'Метод не підтримується' });
+	}
 }
