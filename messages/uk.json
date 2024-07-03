@@ -12,13 +12,14 @@
 		"history_of_changes": "Історія змін",
 		"settings": "Налаштування"
 	},
-	"staff" : {
-
-	},
-	"schedule" : {
-		"calendar": "Календар"
-
-	}, "tasks" : {
+	"staff": {},
+	"schedule": {
+		"calendar": "Календар",
+		"tabs_group": "Групові заняття",
+		"tabs_personal": "Персональні заняття",
+		"add_group": "Групове заняття",
+		"add_personal": "Персональне заняття"
 		
-	}
+	},
+	"tasks": {}
 }

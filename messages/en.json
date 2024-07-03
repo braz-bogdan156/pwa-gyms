@@ -16,7 +16,11 @@
 
 	},
 	"schedule" : {
-		"calendar": "Calendar"
+		"calendar": "Calendar",
+		"tabs_group": "Group sessions",
+		"tabs_personal": "Personal sessions",
+		"add_group": "Group session",
+		"add_personal": "Personal session"
 
 	}, "tasks" : {
 		
